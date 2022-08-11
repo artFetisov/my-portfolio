@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {FC} from 'react';
+import {Header} from "./components/screens/Header/Header";
+import {MailBlock} from "./components/screens/MainBlock/MainBlock";
+import {SkillsBlock} from "./components/screens/SkillsBlock/SkillsBlock";
+import {WorksBlock} from "./components/screens/WorksBlock/WorksBlock";
+import {RecruitmentBlock} from "./components/screens/RecruitmentBlock/RecruitmentBlock";
+import {ContactsBlock} from "./components/screens/ContactsBlock/ContactsBlock";
+import {Footer} from "./components/screens/Footer/Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const App: FC = () => {
+    return (
+        <div>
+            <Header/>
+            <MailBlock/>
+            <SkillsBlock/>
+            <WorksBlock/>
+            <RecruitmentBlock/>
+            <ContactsBlock/>
+            <Footer/>
+        </div>
+    );
 }
 
-export default App;
+

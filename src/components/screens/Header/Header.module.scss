@@ -1,0 +1,28 @@
+.header {
+  height: 70px;
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid white;
+  margin-right: 50px;
+
+  & > a {
+    color: white;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+
+
+

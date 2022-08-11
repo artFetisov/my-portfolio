@@ -1,0 +1,42 @@
+.skillsBlock {
+  background-color: #dff3c0;
+  height: 75vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid white;
+
+  & > h2 {
+    background-color: white;
+  }
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  border: 1px solid white;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 310px;
+  min-height: 300px;
+  background-color: white;
+
+  .icon {
+    width: 60px;
+    height: 60px;
+    background-color: cornflowerblue;
+  }
+}
