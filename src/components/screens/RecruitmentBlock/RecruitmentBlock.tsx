@@ -10,7 +10,7 @@ export const RecruitmentBlock: FC = () => {
     return <div className={styles.recruitmentBlock}>
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <h2>Рассматриваю вариант удаленной работы</h2>
+                <h2 className={styles.text}>Рассматриваю вариант удаленной работы</h2>
                 <MyButton onClick={onClickHandler}>Нанять меня</MyButton>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import {FC, useState} from "react";
+import {FC, useState, MouseEvent} from "react";
 import styles from './ContactsBlock.module.scss';
 import {MyInput} from "../../ui/MyInput/MyInput";
 import {MyTextarea} from "../../ui/MyTextarea/MyTextarea";
@@ -9,7 +9,8 @@ export const ContactsBlock: FC = () => {
     const [password, setPassword] = useState('')
     const [description, setDescription] = useState('')
 
-    const onClickHandler = () => {
+    const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault()
         alert(`name: ${name} || password: ${password} || description: ${description}`)
     }
 

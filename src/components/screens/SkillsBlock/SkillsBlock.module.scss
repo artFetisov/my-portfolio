@@ -1,6 +1,8 @@
+@import './src/scss/media_mixin';
+
 .skillsBlock {
   background-color: #dff3c0;
-  height: 75vh;
+  min-height: 75vh;
 }
 
 .container {
@@ -11,6 +13,10 @@
   width: 80%;
   margin: 0 auto;
   border: 1px solid white;
+
+  @include _1220 {
+    width: 100%;
+  }
 
   & > h2 {
     background-color: white;
@@ -23,6 +29,14 @@
   flex-wrap: wrap;
   width: 100%;
   border: 1px solid white;
+
+  @include _1220 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 
 .skill {
@@ -30,9 +44,19 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 310px;
+  width: 300px;
   min-height: 300px;
   background-color: white;
+  padding: 10px;
+
+  @include _1220 {
+    width: 600px;
+    margin: 10px 0;
+  }
+
+  @include _600 {
+    width: 100%;
+  }
 
   .icon {
     width: 60px;

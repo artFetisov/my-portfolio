@@ -1,3 +1,5 @@
+@import './src/scss/media_mixin';
+
 .mainBlock {
   background-color: pink;
   height: 100vh;
@@ -5,21 +7,32 @@
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   height: 100%;
   width: 80%;
   margin: 0 auto;
   border: 1px solid white;
+
+  @include _600 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .text {
   background-color: white;
   width: 300px;
+  padding: 10px;
 }
 
 .photo {
   width: 300px;
   height: 400px;
-  background-color: white;
+  background-color: grey;
+  padding: 10px;
 }

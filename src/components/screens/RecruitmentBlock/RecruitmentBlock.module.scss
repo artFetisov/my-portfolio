@@ -1,3 +1,5 @@
+@import './src/scss/media_mixin';
+
 .recruitmentBlock {
   background-color: #f3f3a8;
   height: 40vh;
@@ -11,19 +13,32 @@
   width: 80%;
   margin: 0 auto;
   border: 1px solid white;
+
+  @include _1220 {
+    width: 100%;
+  }
+
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   border: 1px solid white;
-  min-height: 100px;
+  height: 100%;
   width: 100%;
+
+  @include _1220 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+  }
 
   & > h2 {
     background-color: white;
     margin: 0;
+    text-align: center;
   }
 }

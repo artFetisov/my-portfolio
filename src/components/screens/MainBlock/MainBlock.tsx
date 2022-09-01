@@ -1,7 +1,7 @@
 import {FC} from "react";
 import styles from './MainBlock.module.scss';
 
-export const MailBlock: FC = () => {
+export const MainBlock: FC = () => {
     return <div className={styles.mainBlock}>
         <div className={styles.container}>
             <div className={styles.text}>
@@ -9,7 +9,7 @@ export const MailBlock: FC = () => {
                 <h1>I am Jeffrey Aaron</h1>
                 <p>Frontend developer</p>
             </div>
-            <div className={styles.photo}>aaa</div>
+            <div className={styles.photo}>image</div>
         </div>
     </div>
 }

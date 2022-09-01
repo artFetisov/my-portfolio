@@ -4,6 +4,8 @@ import {Nav} from "./Nav";
 
 export const Header: FC = () => {
     return <header className={styles.header}>
-        <Nav/>
+        <div className={styles.container}>
+            <Nav/>
+        </div>
     </header>
 }
