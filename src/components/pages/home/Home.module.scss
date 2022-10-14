@@ -1,0 +1,55 @@
+@import '../../../scss/variables';
+
+.heading {
+  margin: 0 0 32px;
+  transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-box-shadow .3s;
+
+  h2 {
+    color: #333;
+    font-family: poppins, Sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2em;
+  }
+}
+
+.border {
+  width: 70px;
+  height: 5px;
+  background-color: #000;
+
+  margin: 0 0 40px;
+  transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-box-shadow .3s;
+
+}
+
+.typingBlock {
+  margin: 0 0 38px;
+  //transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-box-shadow .3s;
+  transition: all 3s ease;
+  position: relative;
+  clear: both;
+  width: 100%;
+  min-height: 1px;
+  z-index: 1;
+  transform: translateZ(0);
+
+  h3 {
+    color: $main-color;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+
+    & > span:nth-child(2) {
+      margin-left: 5px;
+      color: #333;
+      font-weight: 600;
+    }
+  }
+}
+
+.buttonWrap {
+  width: 100%;
+}

@@ -1,8 +1,14 @@
 {
   "name": "my-portfolio",
   "version": "0.1.0",
+  "homepage": "https://artfetisov.github.io/my-portfolio/",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -10,9 +16,17 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@types/react-typing-effect": "^2.0.3",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "6.3.0",
     "react-scripts": "5.0.1",
+    "react-tsparticles": "^2.3.3",
+    "react-typing-effect": "^2.0.5",
+    "sass": "^1.54.8",
+    "tsparticles": "^2.3.4",
+    "tsparticles-engine": "^2.3.3",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
@@ -20,7 +34,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,7 +56,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "sass": "^1.54.4"
-  }
+  "devDependencies": {}
 }

@@ -9,5 +9,7 @@ interface IMyButtonProps extends DefaultButtonPropsType {
 }
 
 export const MyButton: FC<IMyButtonProps> = ({children, ...props}) => {
-    return <button className={styles.btn} {...props}>{children}</button>
+    return <button className={styles.btn} {...props}>
+        <span> {children}</span>
+    </button>
 }

@@ -1,21 +1,18 @@
 .btn {
   border: none;
   outline: none;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: black;
-  padding: 12px 24px;
-  border-radius: 4px;
+  font-family: poppins, Sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 60px;
+  background-color: #333;
+  border-radius: 0 0 0 0;
+  padding: 0 40px;
+  color: #fff;
+  transition: all .3s ease;
   cursor: pointer;
-  transition: background-color .1s ease-in-out;
-  font-weight: bold;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-
-  &:active {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    transform: scale(1.01);
+    background-color: #000;
   }
 }

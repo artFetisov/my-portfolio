@@ -1,24 +1,15 @@
 import React, {FC} from 'react';
-import {Header} from "./components/screens/Header/Header";
-import {MainBlock} from "./components/screens/MainBlock/MainBlock";
-import {SkillsBlock} from "./components/screens/SkillsBlock/SkillsBlock";
-import {WorksBlock} from "./components/screens/WorksBlock/WorksBlock";
-import {RecruitmentBlock} from "./components/screens/RecruitmentBlock/RecruitmentBlock";
-import {ContactsBlock} from "./components/screens/ContactsBlock/ContactsBlock";
-import {Footer} from "./components/screens/Footer/Footer";
+import {Layout} from "./components/layout/Layout";
+import styles from './App.module.scss';
+import {Home} from "./components/pages/home/Home";
+
 
 export const App: FC = () => {
-    return (
-        <div>
-            <Header/>
-            <MainBlock/>
-            <SkillsBlock/>
-            <WorksBlock/>
-            <RecruitmentBlock/>
-            <ContactsBlock/>
-            <Footer/>
-        </div>
-    );
+    return <div className={styles.mainContainer}>
+        <Layout>
+            <Home />
+        </Layout>
+    </div>
 }
 
 

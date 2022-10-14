@@ -1,0 +1,44 @@
+@import '../../../scss/common_mixin';
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: #fff;
+  z-index: 10;
+  line-height: 70px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  @include flex(space-between, center);
+  padding: 0 70px;
+  transition: all .5s ease;
+
+  .copyright {
+    color: #333;
+    font-family: Poppins;
+  }
+
+  .socialList {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    @include flex(space-between, center, wrap);
+    list-style-type: none;
+
+    & > li {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #333333;
+      font-size: 15px;
+      display: block;
+      transition: all .3s ease;
+    }
+  }
+}

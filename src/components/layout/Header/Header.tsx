@@ -1,11 +1,14 @@
 import {FC} from "react";
 import styles from './Header.module.scss';
-import {Nav} from "./Nav";
+import {NavBar} from "./NavBar/NavBar";
 
 export const Header: FC = () => {
     return <header className={styles.header}>
-        <div className={styles.container}>
-            <Nav/>
+        <div className={styles.navWrap}>
+            <div>
+                <h2>CAVANI</h2>
+            </div>
+            <NavBar/>
         </div>
     </header>
 }

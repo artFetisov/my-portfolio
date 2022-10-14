@@ -1,0 +1,24 @@
+@import '../../../scss/common_mixin';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  line-height: 70px;
+  background-color: #fff;
+  z-index: 10;
+  padding: 0 70px;
+  @include flex(space-between, center);
+  transition: all .5s ease;
+
+  .navWrap {
+    width: 100%;
+    line-height: 40px;
+    @include flex(space-between, center);
+  }
+
+
+}
+
