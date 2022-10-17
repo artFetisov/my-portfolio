@@ -2,8 +2,9 @@ import {FC} from "react";
 import styles from './Home.module.scss';
 import {MyButton} from "../../ui/MyButton/MyButton";
 import {TypingEffect} from "../../ui/TypingEffect/TypingEffect";
+import {Link} from "react-router-dom";
 
-export const Home: FC = () => {
+export const HomePage: FC = () => {
     return <div>
         <div className={styles.heading}>
             <h2>ARTEM FETISOV</h2>
@@ -14,9 +15,11 @@ export const Home: FC = () => {
             <TypingEffect text={'Developer'}/>
         </div>
         <div className={styles.buttonWrap}>
-            <MyButton>
-                Get in Touch
-            </MyButton>
+            <Link to={'contact'}>
+                <MyButton>
+                    Get in Touch
+                </MyButton>
+            </Link>
         </div>
     </div>
 }

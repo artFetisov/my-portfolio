@@ -8,21 +8,20 @@
   transition: all .5s ease;
   background-color: #fff;
 
-  .leftSideWrap {
+  .rightSideWrap {
     padding-left: 39%;
     width: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
 
-    .leftSideContainer {
-      padding: 90px 100px;
+    .rightSideContainer {
+      padding: 92px 100px;
       position: relative;
       width: 100%;
-      height: auto;
+      height: calc(100vh - 70px);
       clear: both;
       hyphens: manual;
       margin: 0 auto;
       --widgets-spacing: 20px;
+      overflow-y: auto;
     }
   }
 }

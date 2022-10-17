@@ -1,0 +1,39 @@
+@import '../../../scss/common_mixin';
+
+.itemWrap {
+  width: 33.33%;
+  height: 155px;
+  border: 1px solid #00000012;
+  transition: all .3s ease;
+  padding: 32px 25px;
+  margin: 0 20px 30px 0;
+  @include flex(flex-start, center, wrap, column);
+
+  &:hover {
+    border: 1px solid #aaa;
+  }
+
+  &:nth-child(3) {
+    margin: 0 0 30px 0;
+  }
+
+  .iconWrap {
+    margin-bottom: 5px;
+
+    & > svg {
+      color: #333;
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1;
+    }
+  }
+
+  .infoWrap {
+    text-align: center;
+    color: #7d7789;
+    font-family: open sans, Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7em;
+  }
+}

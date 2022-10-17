@@ -11,8 +11,8 @@ export const Layout: FC<{ children: ReactNode }> = ({children}) => {
         <div className={styles.contentContainer}>
             <MainPhoto/>
             <MyParticle/>
-            <div className={styles.leftSideWrap}>
-                <div className={styles.leftSideContainer}>
+            <div className={styles.rightSideWrap}>
+                <div className={styles.rightSideContainer}>
                     {children}
                 </div>
             </div>

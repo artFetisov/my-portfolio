@@ -1,16 +1,19 @@
-import {ChangeEvent, DetailedHTMLProps, FC, InputHTMLAttributes} from "react";
+import {DetailedHTMLProps, forwardRef, InputHTMLAttributes} from "react";
 import styles from './MyTextarea.module.scss';
+import cn from 'classnames';
+import {FieldError} from "react-hook-form";
 
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>
 
 interface IMyTextareaProps extends DefaultInputPropsType {
-    setValue: (value: string) => void
+    stylesI?: string | number | {}
+    error: FieldError | undefined
 }
 
-export const MyTextarea: FC<IMyTextareaProps> = ({setValue, ...props}) => {
-    function onChangeHandler(e: ChangeEvent<HTMLTextAreaElement>) {
-        setValue(e.currentTarget.value)
-    }
+export const MyTextarea = forwardRef<HTMLTextAreaElement, IMyTextareaProps>(({error, stylesI, ...props}, ref) => {
 
-    return <textarea className={styles.textarea} onChange={onChangeHandler} {...props}/>
-}
+    return <div className={styles.textareaWrap}>
+        <textarea ref={ref} className={cn(styles.textarea, stylesI)} {...props}/>
+        {error && <div className={styles.error}>{error.message}</div>}
+    </div>
+})

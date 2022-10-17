@@ -1,19 +1,21 @@
-import {ChangeEvent, DetailedHTMLProps, FC, InputHTMLAttributes} from "react";
+import {DetailedHTMLProps, forwardRef, InputHTMLAttributes} from "react";
 import styles from './MyInput.module.scss';
+import {FieldError} from "react-hook-form";
+import cn from 'classnames';
 
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 interface IMyInputProps extends DefaultInputPropsType {
-    setValue: (value: string) => void
+    stylesI?: string | number | {}
+    error: FieldError | undefined
 }
 
-export const MyInput: FC<IMyInputProps> = ({setValue, ...props}) => {
-    function onChangeHandler(e: ChangeEvent<HTMLInputElement>) {
-        setValue(e.currentTarget.value)
-    }
+export const MyInput = forwardRef<HTMLInputElement, IMyInputProps>(({error, stylesI, ...props}, ref) => {
 
-    return <input className={styles.input}
-                  name="input"
-                  onChange={onChangeHandler}
-                  {...props}/>
-}
+    return <div className={styles.wrapperInp}><input ref={ref} className={cn(styles.input, stylesI)}
+                                                     style={styles}
+                                                     name="input"
+                                                     {...props}/>
+        {error && <div className={styles.error}>{error.message}</div>}
+    </div>
+})
