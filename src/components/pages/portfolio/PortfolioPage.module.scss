@@ -1,0 +1,14 @@
+.portfolioContainer {
+  width: 100%;
+  margin-bottom: 50px;
+  position: relative;
+
+  .worksContainer {
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+    transition: all .3s;
+    float: left;
+    clear: both;
+  }
+}

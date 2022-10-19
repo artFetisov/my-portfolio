@@ -8,6 +8,7 @@
   transition: all .5s ease;
   background-color: #fff;
 
+
   .rightSideWrap {
     padding-left: 39%;
     width: 100%;
@@ -16,12 +17,23 @@
       padding: 92px 100px;
       position: relative;
       width: 100%;
-      height: calc(100vh - 70px);
+      height: calc(100vh - 140px);
       clear: both;
       hyphens: manual;
       margin: 0 auto;
       --widgets-spacing: 20px;
       overflow-y: auto;
+
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #fff;
+        border: 4px solid #aaa;
+      }
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        background-color: #ececec;
+      }
     }
   }
 }

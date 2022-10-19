@@ -9,6 +9,7 @@
 
 body, html {
   font-family: Open Sans, Poppins;
+  color: #7D7789;
   overflow: hidden;
   background-color: $bg-color;
   width: 100%;
@@ -19,6 +20,16 @@ body, html {
 
 a {
   text-decoration: none;
+}
+
+@keyframes fn_expand {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
 
 

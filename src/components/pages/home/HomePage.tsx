@@ -2,9 +2,12 @@ import {FC} from "react";
 import styles from './Home.module.scss';
 import {MyButton} from "../../ui/MyButton/MyButton";
 import {TypingEffect} from "../../ui/TypingEffect/TypingEffect";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
+import {useSetPhoto} from "../../../hooks/useSetPhoto";
 
 export const HomePage: FC = () => {
+    useSetPhoto()
+
     return <div>
         <div className={styles.heading}>
             <h2>ARTEM FETISOV</h2>

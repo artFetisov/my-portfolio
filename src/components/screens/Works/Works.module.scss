@@ -1,0 +1,83 @@
+@import '../../../scss/common_mixin';
+
+.works {
+  list-style-type: none;
+  width: 100%;
+  @include flex(initial, initial, wrap);
+
+  .work {
+    margin-bottom: 50px;
+    width: 50%;
+    float: left;
+    color: #333;
+    background-color: transparent;
+    overflow: hidden;
+    transition: all .3s ease;
+
+
+    & > div {
+      width: 100%;
+      float: left;
+      clear: both;
+      min-height: 200px;
+      height: 400px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 70px 40px 63px;
+      border: 1px solid #b9b8c3;
+      transition: all .3s ease-out;
+
+      &.selected {
+        background-color: #333333;
+        color: #f5f5f5;
+        border: 1px solid white;
+      }
+
+
+      .icon {
+        width: 60px;
+        height: 60px;
+        display: block;
+        left: 50%;
+        margin-left: -30px;
+        position: relative;
+        margin-bottom: 35px;
+        z-index: 5;
+
+        & > svg {
+          width: 60px;
+          height: 60px;
+          fill: currentColor;
+        }
+      }
+
+      .titleHolder {
+        z-index: 5;
+
+        & > h3 {
+          font-family: "Poppins", Sans-serif;
+          font-size: 24px;
+          font-weight: 500;
+          margin-bottom: 15px;
+        }
+
+        & > p {
+          color: #aaa;
+          font-family: "Open Sans", Sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 26px;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      padding-left: 25px;
+    }
+
+    &:nth-child(odd) {
+      padding-right: 25px;
+    }
+  }
+}

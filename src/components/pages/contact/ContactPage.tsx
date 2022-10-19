@@ -4,8 +4,11 @@ import styles from './ContactPage.module.scss';
 import {faPhoneFlip, faLocationArrow, faEnvelopesBulk} from "@fortawesome/free-solid-svg-icons";
 import {InfoBox} from "../../ui/InfoBox/InfoBox";
 import {ContactForm} from "./ContactForm";
+import {useSetPhoto} from "../../../hooks/useSetPhoto";
 
 export const ContactPage: FC = () => {
+    useSetPhoto()
+
     return <div className={styles.container}>
         <CustomHeading text={'get in touch'}/>
         <section className={styles.infoContainer}>
