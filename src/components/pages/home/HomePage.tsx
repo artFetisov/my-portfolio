@@ -8,14 +8,14 @@ import {useSetPhoto} from "../../../hooks/useSetPhoto";
 export const HomePage: FC = () => {
     useSetPhoto()
 
-    return <div>
+    return <div className={styles.homeContainer}>
         <div className={styles.heading}>
             <h2>ARTEM FETISOV</h2>
         </div>
         <div className={styles.border}>
         </div>
         <div className={styles.typingBlock}>
-            <TypingEffect text={'Developer'}/>
+            <TypingEffect text={['Developer', 'Freelancer']}/>
         </div>
         <div className={styles.buttonWrap}>
             <Link to={'contact'}>

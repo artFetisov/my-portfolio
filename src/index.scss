@@ -32,5 +32,73 @@ a {
   }
 }
 
+.fade-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.photo-enter {
+  opacity: 0;
+  transform: scale(1.1)
+}
+
+.photo-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 500ms;
+}
+
+.photo-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.photo-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: transform 500ms;
+}
+
+.works-enter {
+  opacity: 0;
+  transform: scale(0.01)
+}
+
+.works-enter-active {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+  transition: transform 500ms, opacity 500ms;
+}
+
+.works-exit {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.works-exit-active {
+  opacity: 0;
+  transform: scale(0.001);
+  transition: transform 500ms, opacity 500ms;
+}
+
+
+
 
 

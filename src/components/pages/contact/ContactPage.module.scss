@@ -11,13 +11,13 @@
   .formContainer {
     position: relative;
     width: 100%;
-    margin-bottom: 50px;
+    //margin-bottom: 50px;
     @include flex(space-between, center);
 
     .form {
       width: 50%;
       @include flex(center, flex-start, _, column);
-      margin-bottom: 30px;
+      //margin-bottom: 30px;
       padding-right: 15px;
       transition: all .3s ease;
 

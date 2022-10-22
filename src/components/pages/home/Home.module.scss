@@ -1,7 +1,11 @@
 @import '../../../scss/variables';
 
+.homeContainer {
+  padding-top: 36px;
+}
+
 .heading {
-  margin: 0 0 32px;
+  margin-bottom: 32px;
   transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-box-shadow .3s;
 
   h2 {

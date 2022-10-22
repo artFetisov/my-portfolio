@@ -14,7 +14,6 @@ export const Work: FC<{ work: IPortfolioItem }> = ({work}) => {
     const isSelected = selectedWork === work
 
 
-
     const onMouseMoveHandler = () => {
         dispatch(setPhotoUrl(work.photo))
         dispatch(setSelectedWork(work))

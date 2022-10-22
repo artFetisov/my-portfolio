@@ -26,9 +26,11 @@ const appSlice = createSlice({
         // @ts-ignore
         setSelectedWorks(state, action: PayloadAction<{ works: IPortfolioItem[], filter: FilterType }>) {
             if (action.payload.filter === 'all') {
-                return state.selectedWorks = action.payload.works
+                state.selectedWorks = action.payload.works.map(w => w)
+            } else {
+                state.selectedWorks = action.payload.works.filter(w => w.category === action.payload.filter)
             }
-            state.selectedWorks = action.payload.works.filter(w => w.category === action.payload.filter)
+
         },
     },
 })

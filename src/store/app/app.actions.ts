@@ -13,8 +13,9 @@ export const setFilterThunk = createAsyncThunk<void, FilterType, { state: AppRoo
         const works = getState().app.works
         Promise.all([await dispatch(setFilter(filter)), await dispatch(setSelectedWorks({
             works,
-            filter: filter
+            filter
         }))]).then(() => {
+            console.log(getState().app.selectedWorks)
             const selectedWork = getState().app.selectedWorks[0]
             dispatch(setSelectedWork(selectedWork))
             dispatch(setPhotoUrl(selectedWork.photo))

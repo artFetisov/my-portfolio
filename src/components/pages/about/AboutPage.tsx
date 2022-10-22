@@ -8,7 +8,7 @@ import {useSetPhoto} from "../../../hooks/useSetPhoto";
 export const AboutPage: FC = () => {
     useSetPhoto()
 
-    return <div>
+    return <div className={styles.aboutContainer}>
         <CustomHeading text={'about me'}/>
         <section className={styles.infoBlock}>
             <div className={styles.infoLeftSideWrap}>
@@ -33,6 +33,10 @@ export const AboutPage: FC = () => {
                         <li>
                             <span>Address:</span>
                             <span>Lenina Street, Penza, Russia</span>
+                        </li>
+                        <li>
+                            <span>Study:</span>
+                            <span>Gnessin Academy</span>
                         </li>
                         <li>
                             <span>Email:</span>

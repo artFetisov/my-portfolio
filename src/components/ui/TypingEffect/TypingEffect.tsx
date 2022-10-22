@@ -10,30 +10,21 @@ export const TypingEffect: FC<ITypingProps> = ({text}) => {
     return <>
         <ReactTypingEffect
             className={styles.typing}
-            speed={0}
-            eraseSpeed={0}
-            eraseDelay={4000}
-            typingDelay={200}
+            speed={30}
+            eraseSpeed={30}
+            eraseDelay={1500}
+            typingDelay={50}
             text={text}
-            cursor={' '}
+            // @ts-ignore
+            cursorRenderer={cursor => <h2>{cursor}</h2>}
+            cursorClassName={styles.cursor}
             displayTextRenderer={(text) => {
                 return <h3>
                     <span>React</span>
-                    <span><b>{text}</b></span>
+                    <span><b className={styles.typingElem}>{text}</b></span>
                 </h3>
             }
             }
         />
-        {/*<ReactTypingEffect*/}
-        {/*    speed={200}*/}
-        {/*    eraseSpeed={200}*/}
-        {/*    eraseDelay={1500}*/}
-        {/*    typingDelay={1500}*/}
-        {/*    text={text}*/}
-        {/*    displayTextRenderer={(text) => {*/}
-        {/*        return <div style={{border: '1px solid black'}}></div>*/}
-        {/*    }*/}
-        {/*    }*/}
-        {/*/>*/}
     </>
 }

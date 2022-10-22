@@ -1,5 +1,6 @@
 import {FC} from "react";
 import styles from './ProgressBar.module.scss';
+import Fade from "react-awesome-reveal";
 
 interface IProgressBarProps {
     width: number
@@ -13,7 +14,9 @@ export const ProgressBar: FC<IProgressBarProps> = ({width, label}) => {
                                     <span className={styles.progressNumber}>{width}%</span>
                                 </span>
         <div className={styles.progressBar}>
-            <div className={styles.bar} style={{width: `${width}%`}}></div>
+            <Fade triggerOnce={true}>
+                <div className={styles.bar} style={{width: `${width}%`}}></div>
+            </Fade>
         </div>
 
     </div>

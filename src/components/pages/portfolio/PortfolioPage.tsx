@@ -8,6 +8,8 @@ import {useSetPhoto} from "../../../hooks/useSetPhoto";
 import {useAppSelector} from "../../../hooks/useAppSelector";
 import {useAppDispatch} from "../../../hooks/useAppDispatch";
 import {setFilter, setSelectedWork, setSelectedWorks} from "../../../store/app/app.slice";
+import {Work} from "../../screens/Works/Work";
+import {TransitionGroup, CSSTransition} from "react-transition-group";
 
 const filterWorksHandler = (filter: FilterType, works: IPortfolioItem[]) => {
     if (filter === 'react') return works.filter(work => work.category === 'react')
@@ -28,12 +30,16 @@ export const PortfolioPage: FC = () => {
         dispatch(setSelectedWork(works[0]))
     }, [])
 
-    return <div>
+    return <div className={styles.portfolioMainContainer}>
         <CustomHeading text={'creative portfolio'}/>
         <div className={styles.portfolioContainer}>
             <PortfolioNavigation/>
             <section className={styles.worksContainer}>
-                <Works works={filteredWorks}/>
+                <TransitionGroup>
+                    <CSSTransition key={filter} classNames={'works'} timeout={500}>
+                        <Works works={filteredWorks}/>
+                    </CSSTransition>
+                </TransitionGroup>
             </section>
         </div>
     </div>
