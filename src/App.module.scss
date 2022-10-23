@@ -1,4 +1,15 @@
 .mainContainer {
-  position: relative;
+  //position: relative;
   height: 100%;
+  transition: all .3s ease;
+
+  &.translate {
+    transform: translateX(-400px);
+    transition: all .3s ease;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
 }

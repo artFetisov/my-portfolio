@@ -5,5 +5,6 @@ export interface IAppState {
     filter: FilterType
     works: IPortfolioItem[]
     selectedWork: IPortfolioItem | null
-    selectedWorks: IPortfolioItem[]
+    selectedWorks: IPortfolioItem[],
+    isOpenMenu: boolean
 }

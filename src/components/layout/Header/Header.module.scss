@@ -1,4 +1,5 @@
 @import '../../../scss/common_mixin';
+@import '../../../scss/media_mixin';
 
 .header {
   position: fixed;
@@ -13,12 +14,27 @@
   @include flex(space-between, center);
   transition: all .5s ease;
 
+  @include _1400() {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 60px;
+  }
+
+  @include _1040() {
+    padding: 0 20px;
+    height: 50px;
+    line-height: 50px;
+  }
+
   .navWrap {
     width: 100%;
     line-height: 40px;
     @include flex(space-between, center);
+
+    @include _1040() {
+
+      line-height: 28px;
+    }
   }
-
-
 }
 

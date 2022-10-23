@@ -3,6 +3,7 @@ import {links} from "./links.data";
 import {Link, useLocation} from "react-router-dom";
 import styles from './NavBar.module.scss';
 import cn from 'classnames';
+import {BurgerButton} from "../../../ui/BurgerButton/BurgerButton";
 
 export const NavBar: FC = () => {
     const {pathname} = useLocation()
@@ -33,5 +34,6 @@ export const NavBar: FC = () => {
                 </span>
                 </Link></li>)}
         </ul>
+        <BurgerButton/>
     </nav>
 }

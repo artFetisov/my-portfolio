@@ -1,3 +1,6 @@
+@import '../../scss/media_mixin';
+@import '../../scss/common_mixin';
+
 .contentContainer {
   position: relative;
   width: 100%;
@@ -8,10 +11,44 @@
   transition: all .5s ease;
   background-color: #fff;
 
+  @include _1400() {
+    margin-top: 60px;
+    padding: 0 60px;
+    height: calc(100vh - 120px);
+    max-height: calc(100vh - 120px);
+  }
+
+  @include _1040() {
+    margin-top: 50px;
+    padding: 0px;
+    height: calc(100vh - 100px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border: 4px solid #aaa;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: #ececec;
+  }
+
 
   .rightSideWrap {
-    padding-left: 39%;
-    width: 100%;
+    padding-left: 40%;
+    height: 100%;
+
+    @include _1400() {
+      padding-left: 34.5%;
+    }
+
+    @include _1040() {
+      padding-left: 0;
+      margin-top: calc(100vh - 6px);
+    }
 
     .page {
       padding: 92px 100px;
@@ -23,6 +60,17 @@
       margin: 0 auto;
       --widgets-spacing: 20px;
       overflow-y: auto;
+
+      @include _1400() {
+        height: calc(100vh - 120px);
+        padding: 96px 58px 96px 58px;
+      }
+
+      @include _1040() {
+        height: calc(100vh - 100px);
+        padding: 0 20px;
+        overflow-y: visible;
+      }
 
 
       &::-webkit-scrollbar-thumb {

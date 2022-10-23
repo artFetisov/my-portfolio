@@ -7,7 +7,8 @@ const initialState: IAppState = {
     filter: 'all',
     works: [],
     selectedWork: null,
-    selectedWorks: []
+    selectedWorks: [],
+    isOpenMenu: false
 }
 
 const appSlice = createSlice({
@@ -32,9 +33,12 @@ const appSlice = createSlice({
             }
 
         },
+        setIsOpen(state, action: PayloadAction<boolean>) {
+            state.isOpenMenu = action.payload
+        }
     },
 })
 
-export const {setPhotoUrl, setFilter, setSelectedWork, setSelectedWorks} = appSlice.actions
+export const {setPhotoUrl, setFilter, setSelectedWork, setSelectedWorks, setIsOpen} = appSlice.actions
 
 export const {reducer} = appSlice
