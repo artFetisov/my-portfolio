@@ -58,10 +58,10 @@ export const AboutPage: FC = () => {
                         <ProgressBar width={95} label={'Typescript'}/>
                         <ProgressBar width={95} label={'React'}/>
                         <ProgressBar width={90} label={'Redux-toolkit'}/>
-                        <ProgressBar width={80} label={'Unit tests'}/>
+                        <ProgressBar width={40} label={'Unit tests'}/>
                         <ProgressBar width={90} label={'HTML & CSS'}/>
                         <ProgressBar width={90} label={'HTML & CSS'}/>
-                        <ProgressBar width={90} label={'HTML & CSS'}/>
+                        <ProgressBar width={86} label={'HTML & CSS'}/>
                     </div>
                 </div>
             </div>
@@ -69,10 +69,10 @@ export const AboutPage: FC = () => {
                 <div className={styles.infoRightSide}>
                     <div className={styles.block}>
                         <ProgressBar width={95} label={'Typescript'}/>
-                        <ProgressBar width={95} label={'React'}/>
-                        <ProgressBar width={90} label={'Redux-toolkit'}/>
+                        <ProgressBar width={80} label={'React'}/>
+                        <ProgressBar width={20} label={'Redux-toolkit'}/>
                         <ProgressBar width={80} label={'Unit tests'}/>
-                        <ProgressBar width={90} label={'HTML & CSS'}/>
+                        <ProgressBar width={16} label={'HTML & CSS'}/>
                         <ProgressBar width={90} label={'HTML & CSS'}/>
                         <ProgressBar width={90} label={'HTML & CSS'}/>
                     </div>

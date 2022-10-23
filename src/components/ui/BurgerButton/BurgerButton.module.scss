@@ -13,19 +13,20 @@
     display: block;
   }
 
-  &:hover .a {
-    right: 21px;
-  }
+  &.active {
+    .a {
+      right: 21px;
+    }
 
-  &:hover .b {
-    width: 26px;
-    right: 13px;
-  }
+    .b {
+      width: 26px;
+      right: 13px;
+    }
 
-  &:hover .c {
-    right: 21px;
+    .c {
+      right: 21px;
+    }
   }
-
 
   &:after {
     content: '';

@@ -1,4 +1,5 @@
 @import '../../../scss/common_mixin';
+@import '../../../scss/media_mixin';
 
 .aboutContainer {
   margin-bottom: -110px;
@@ -10,8 +11,17 @@
   @include flex(flex-start, flex-start);
   width: 100%;
 
+  @include _1040() {
+    @include flex(flex-start, flex-start, wrap);
+  }
+
   .infoLeftSideWrap {
     width: 50%;
+
+    @include _1040() {
+      width: 100%;
+    }
+
 
     .infoLeftSide {
       margin-bottom: 54px;
@@ -19,6 +29,11 @@
       width: 100%;
       @include flex(flex-start, center, wrap);
       align-content: flex-start;
+
+      @include _1040() {
+        padding: 0;
+        //margin-bottom: 0;
+      }
     }
   }
 
@@ -31,10 +46,19 @@
     margin-bottom: 17px;
     transition: all .3s ease;
     width: 100%;
+
+    @include _1040() {
+      //margin-bottom: 0;
+    }
   }
 
   .infoRightSideWrap {
     width: 50%;
+
+    @include _1040() {
+      width: 100%;
+    }
+
 
     .infoRightSide {
       position: relative;
@@ -42,6 +66,10 @@
       margin-bottom: 50px;
       padding-left: 50px;
       align-content: flex-start;
+
+      @include _1040() {
+        padding: 0;
+      }
 
       .list {
         list-style-type: none;

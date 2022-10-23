@@ -22,10 +22,8 @@ export const ContactForm: FC = () => {
 
     const onSubmit: SubmitHandler<IContactData> = (data) => {
         setIsShowSpinner(true)
-        console.log('submit')
 
         setTimeout(() => {
-            console.log(data)
             reset()
             setIsShowSpinner(false)
         }, 2000)
@@ -35,12 +33,8 @@ export const ContactForm: FC = () => {
         setIsShowSpinner(true)
 
         setTimeout(() => {
-            console.log(data)
             setIsShowSpinner(false)
         }, 2000)
-
-        console.log('error')
-        console.log(data, '---', event)
     }
 
     const isErrors = formState.errors.email?.message || formState.errors.name?.message
