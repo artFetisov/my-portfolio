@@ -45,13 +45,23 @@
 
     & > li {
       padding-left: 20px;
-    }
+      cursor: pointer !important;
 
-    a {
-      color: #333333;
-      font-size: 15px;
-      display: block;
-      transition: all .3s ease;
+      a {
+        color: #333333;
+        font-size: 15px;
+        display: block;
+        transition: all .3s ease;
+        cursor: pointer !important;
+
+        svg {
+          cursor: pointer;
+
+          path {
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }

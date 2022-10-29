@@ -8,7 +8,6 @@ export const Header: FC = () => {
     return <header className={styles.header}>
         <div className={styles.navWrap}>
             <h2 style={{color: '#333'}}>
-                CAVANI
             </h2>
             <NavBar/>
         </div>

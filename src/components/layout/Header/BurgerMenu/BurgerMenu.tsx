@@ -7,6 +7,9 @@ import {links} from "../NavBar/links.data";
 import {Link} from "react-router-dom";
 import {useAppDispatch} from "../../../../hooks/useAppDispatch";
 import {setIsOpen} from "../../../../store/app/app.slice";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faXmark} from "@fortawesome/free-solid-svg-icons/faXmark";
+import {set} from "react-hook-form";
 
 export const BurgerMenu: FC = () => {
     const {isOpenMenu} = useAppSelector(state => state.app)
@@ -14,6 +17,10 @@ export const BurgerMenu: FC = () => {
 
     const onClickHandler = () => {
         dispatch(setIsOpen(!isOpenMenu))
+    }
+
+    const onCloserHandler = () => {
+        dispatch(setIsOpen(false))
     }
 
     return <>
@@ -33,8 +40,9 @@ export const BurgerMenu: FC = () => {
                         </Link></li>)}
                 </ul>
             </div>
-
+            <div className={styles.closer} onClick={onCloserHandler}>
+                <FontAwesomeIcon icon={faXmark} className={styles.icon}/>
+            </div>
         </div>
     </>
-
 }

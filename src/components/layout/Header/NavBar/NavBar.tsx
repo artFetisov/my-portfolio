@@ -1,4 +1,4 @@
-import {FC, useState} from "react";
+import {FC, useEffect, useState} from "react";
 import {links} from "./links.data";
 import {Link, useLocation} from "react-router-dom";
 import styles from './NavBar.module.scss';
@@ -9,11 +9,11 @@ export const NavBar: FC = () => {
     const {pathname} = useLocation()
     const [localPath, setLocalPath] = useState<string>('')
 
-    const onLocalFilterHandler = (path: string) => {
+    const onLocalPathHandler = (path: string) => {
         setLocalPath(path)
     }
 
-    const onLocalFilterClear = () => {
+    const onLocalPathClear = () => {
         setLocalPath('')
     }
 
@@ -26,8 +26,8 @@ export const NavBar: FC = () => {
                           [styles.active]: pathname === l.path && localPath === '',
                           [styles.localActive]: localPath === l.path
                       })}
-                      onMouseEnter={() => onLocalFilterHandler(l.path)}
-                      onMouseLeave={onLocalFilterClear}
+                      onMouseEnter={() => onLocalPathHandler(l.path)}
+                      onMouseLeave={onLocalPathClear}
                 >
                 <span>
                     {l.title}

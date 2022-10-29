@@ -1,6 +1,9 @@
+@import '../../../../scss/media_mixin';
+
 .menuContainer {
   transform: translateX(400px);
-  background-color: #F6FBFF;
+  //background-color: #F6FBFF;
+  background-color: #fff;
   width: 400px;
   position: fixed;
   top: 0;
@@ -11,9 +14,15 @@
   overflow-y: auto;
 
 
+  @include _600() {
+    transform: translateX(100%);
+    width: 100%;
+  }
+
+
   &.show {
     transition: all .5s ease;
-    transform: translateX(0px);
+    transform: translateX(0);
   }
 
   .listWrapper {
@@ -23,9 +32,11 @@
     .list {
       list-style-type: none;
       margin-top: 15px;
+      cursor: pointer;
 
       & > li {
         margin-bottom: 12px;
+        cursor: pointer;
 
         & > a {
           font-size: 16px;
@@ -35,6 +46,11 @@
           display: block;
           text-decoration: none;
           color: #333;
+          cursor: pointer !important;
+
+          span {
+            cursor: pointer;
+          }
         }
       }
     }
@@ -48,4 +64,39 @@
   height: 50px;
   line-height: 50px;
   background-color: #333;
+}
+
+.closer {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  color: #aaa;
+  z-index: 1000000000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  svg {
+    cursor: pointer !important;
+  }
+
+  path {
+    cursor: pointer !important;
+  }
+
+
+  .icon {
+    //width: 28px;
+    //height: 28px;
+    //display: block;
+    //overflow: hidden;
+    font-size: 30px;
+    font-weight: 300;
+
+  }
 }

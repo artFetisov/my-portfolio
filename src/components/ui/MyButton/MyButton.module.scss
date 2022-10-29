@@ -11,7 +11,11 @@
   padding: 0 40px;
   color: #fff;
   transition: all .3s ease;
-  cursor: pointer;
+  cursor: pointer !important;
+
+  span {
+    cursor: pointer !important;
+  }
 
   &:hover {
     background-color: #000;

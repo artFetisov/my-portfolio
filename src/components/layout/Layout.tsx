@@ -6,7 +6,7 @@ import styles from './Layout.module.scss';
 import {MyParticle} from "../ui/MyParticle/MyParticle";
 import {useLocation} from "react-router-dom";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
-import {BurgerMenu} from "./Header/BurgerMenu/BurgerMenu";
+import cn from "classnames";
 
 export const Layout: FC<{ children: ReactNode }> = ({children}) => {
 
@@ -20,7 +20,10 @@ export const Layout: FC<{ children: ReactNode }> = ({children}) => {
             <TransitionGroup>
                 <CSSTransition key={location.key} classNames={'fade'} timeout={500}>
                     <div className={styles.rightSideWrap}>
-                        <div className={styles.page}>
+                        <div className={cn(styles.page, {
+                            [styles.minusMargin]: location.pathname === '/my-portfolio/home'
+                        })
+                        }>
                             {children}
                         </div>
                     </div>

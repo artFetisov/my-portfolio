@@ -11,7 +11,7 @@ export const useSetPhoto = () => {
     const dispatch = useAppDispatch()
 
     useEffect(() => {
-        if (pathname !== '/portfolio') {
+        if (pathname !== '/my-portfolio/works') {
             dispatch(setPhotoUrl(mainPhoto))
         } else {
             dispatch(setPhotoUrl(myWorks[0].photo))

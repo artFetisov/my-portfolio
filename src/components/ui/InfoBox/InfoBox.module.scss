@@ -1,13 +1,21 @@
 @import '../../../scss/common_mixin';
+@import '../../../scss/media_mixin';
 
 .itemWrap {
   width: 33.33%;
-  height: 155px;
+  height: 160px;
   border: 1px solid #00000012;
   transition: all .3s ease;
   padding: 32px 25px;
   margin: 0 20px 30px 0;
-  @include flex(flex-start, center, wrap, column);
+  @include flex(flex-start, center, no-wrap, column);
+  //overflow: hidden;
+
+  @include _1040() {
+    width: 100%;
+    height: 127px;
+  }
+
 
   &:hover {
     border: 1px solid #aaa;
@@ -15,6 +23,10 @@
 
   &:nth-child(3) {
     margin: 0 0 30px 0;
+
+    @include _1040() {
+      margin: 0 20px 30px 0;
+    }
   }
 
   .iconWrap {
@@ -35,5 +47,6 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 1.7em;
+    word-break: break-word;
   }
 }

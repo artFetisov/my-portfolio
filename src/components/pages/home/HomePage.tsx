@@ -2,7 +2,7 @@ import {FC} from "react";
 import styles from './Home.module.scss';
 import {MyButton} from "../../ui/MyButton/MyButton";
 import {TypingEffect} from "../../ui/TypingEffect/TypingEffect";
-import {Link, useLocation} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {useSetPhoto} from "../../../hooks/useSetPhoto";
 
 export const HomePage: FC = () => {
@@ -18,7 +18,7 @@ export const HomePage: FC = () => {
             <TypingEffect text={['Developer', 'Freelancer']}/>
         </div>
         <div className={styles.buttonWrap}>
-            <Link to={'contact'}>
+            <Link to={'/my-portfolio/contact'}>
                 <MyButton>
                     Get in Touch
                 </MyButton>

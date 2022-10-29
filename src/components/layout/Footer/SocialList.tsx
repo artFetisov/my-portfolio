@@ -22,9 +22,11 @@ const socialIcons: { name: IconDefinition, path: string }[] = [
 export const SocialList: FC = () => {
     return <ul className={styles.socialList}>
         {socialIcons.map((i, ind) => <li key={ind + '-' + i.path}>
-            <Link to={i.path}>
-                <FontAwesomeIcon icon={i.name}/>
-            </Link>
+            <div>
+                <Link to={i.path}>
+                    <FontAwesomeIcon icon={i.name}/>
+                </Link>
+            </div>
         </li>)}
     </ul>
 }
