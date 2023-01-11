@@ -1,7 +1,6 @@
 import {FC} from "react";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {routes} from "./router.data";
-import './router.css';
 
 export const Router: FC = () => {
     return <Routes>

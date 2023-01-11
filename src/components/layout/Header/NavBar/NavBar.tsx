@@ -1,4 +1,4 @@
-import {FC, useEffect, useState} from "react";
+import {FC, useState} from "react";
 import {links} from "./links.data";
 import {Link, useLocation} from "react-router-dom";
 import styles from './NavBar.module.scss';
@@ -16,7 +16,6 @@ export const NavBar: FC = () => {
     const onLocalPathClear = () => {
         setLocalPath('')
     }
-
 
     return <nav className={styles.navContainer}>
         <ul className={styles.navBar}>

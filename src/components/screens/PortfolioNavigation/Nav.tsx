@@ -1,4 +1,4 @@
-import {FC, useState} from "react";
+import {FC} from "react";
 import {ILink} from "./PortfolioNavigation";
 import cn from 'classnames';
 import styles from './PortfolioNavigation.module.scss';
@@ -14,8 +14,10 @@ interface INavProps {
 }
 
 export const Nav: FC<INavProps> = ({link, localFilter, setLocalFilter}) => {
-    const {filter} = useAppSelector(state => state.app)
+    const filter = useAppSelector(state => state.app.filter)
+
     const dispatch = useAppDispatch()
+
     const isActive = filter === link.filter && localFilter === ''
     const isLocalActive = localFilter === link.filter
 
@@ -30,7 +32,6 @@ export const Nav: FC<INavProps> = ({link, localFilter, setLocalFilter}) => {
     const onLocalFilterClear = () => {
         setLocalFilter('')
     }
-
 
     return <li key={link.title + '-' + link.path} onClick={onChangeFilter}
                onMouseEnter={onLocalFilterHandler}

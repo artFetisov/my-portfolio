@@ -4,24 +4,20 @@
 .contentContainer {
   position: relative;
   width: 100%;
-  height: calc(100vh);
-  max-height: calc(100vh);
-  padding-top: 70px;
-  padding-left: 70px;
-  padding-right: 70px;
+  height: calc(100vh - 140px);
+  padding: 0 70px;
   transition: all .5s ease;
   background-color: #fff;
 
+
   @include _1400() {
-    padding-top: 60px;
-    padding-left: 60px;
-    padding-right: 60px;
+    height: calc(100vh - 120px);
+    padding: 0 50px;
   }
 
   @include _1040() {
-    padding-top: 50px;
-    padding-right: 0;
-    padding-left: 0;
+    height: calc(100vh - 100px);
+    padding: 0;
     overflow-y: auto;
   }
 
@@ -35,7 +31,6 @@
     background-color: #ececec;
   }
 
-
   .rightSideWrap {
     padding-left: 40%;
     height: 100%;
@@ -45,11 +40,11 @@
     }
 
     @include _1040() {
-      padding-left: 0;
-      margin-top: calc(100vh - 6px);
+      padding: 95px 20px 0;
     }
 
     .page {
+      //padding: 92px 100px 0 100px;
       padding: 92px 100px;
       position: relative;
       width: 100%;
@@ -62,17 +57,13 @@
 
       @include _1400() {
         height: calc(100vh - 120px);
-        padding: 96px 58px 96px 58px;
+        padding: 96px 58px;
       }
 
       @include _1040() {
         height: calc(100vh - 100px);
-        padding: 0 20px;
+        padding: 0;
         overflow-y: visible;
-
-        &.minusMargin {
-          height: calc(100vh - 194px);
-        }
       }
 
 

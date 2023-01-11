@@ -1,17 +1,17 @@
-import {FC} from "react";
+import React, {FC} from "react";
 import styles from './MainPhoto.module.scss';
-import photo from '../../../assets/images/photo.jpg';
 import {useAppSelector} from "../../../hooks/useAppSelector";
-import {CSSTransition, TransitionGroup} from "react-transition-group";
+import {MyParticle} from "../../ui/MyParticle/MyParticle";
 
 export const MainPhoto: FC = () => {
-    const {photoUrl} = useAppSelector(state => state.app)
+    const photoUrl = useAppSelector(state => state.app.photoUrl)
+
+    const divBackground = {
+        backgroundImage: `url(${(photoUrl)})`,
+    }
 
     return <div className={styles.imageWrap}>
-        <TransitionGroup>
-            <CSSTransition key={photoUrl} classNames='photo' timeout={500}>
-                <img className={styles.image} src={photoUrl} alt={'photo'}/>
-            </CSSTransition>
-        </TransitionGroup>
+        <MyParticle/>
+        <div style={divBackground} className={styles.image}></div>
     </div>
 }

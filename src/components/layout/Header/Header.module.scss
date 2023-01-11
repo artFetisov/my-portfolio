@@ -2,10 +2,7 @@
 @import '../../../scss/media_mixin';
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   height: 70px;
   line-height: 70px;
   background-color: #fff;

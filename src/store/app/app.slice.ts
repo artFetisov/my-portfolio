@@ -24,14 +24,12 @@ const appSlice = createSlice({
         setSelectedWork(state, action: PayloadAction<IPortfolioItem>) {
             state.selectedWork = action.payload
         },
-        // @ts-ignore
         setSelectedWorks(state, action: PayloadAction<{ works: IPortfolioItem[], filter: FilterType }>) {
             if (action.payload.filter === 'all') {
                 state.selectedWorks = action.payload.works.map(w => w)
             } else {
                 state.selectedWorks = action.payload.works.filter(w => w.category === action.payload.filter)
             }
-
         },
         setIsOpen(state, action: PayloadAction<boolean>) {
             state.isOpenMenu = action.payload

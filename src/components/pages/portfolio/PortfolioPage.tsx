@@ -2,13 +2,12 @@ import {FC, useEffect} from "react";
 import {CustomHeading} from "../../ui/CustomHeading/CustomHeading";
 import {PortfolioNavigation} from "../../screens/PortfolioNavigation/PortfolioNavigation";
 import styles from './PortfolioPage.module.scss';
-import {FilterType, IPortfolioItem, myWorks} from "../../../data/portfolio.data";
+import {FilterType, IPortfolioItem} from "../../../data/portfolio.data";
 import {Works} from "../../screens/Works/Works";
 import {useSetPhoto} from "../../../hooks/useSetPhoto";
 import {useAppSelector} from "../../../hooks/useAppSelector";
 import {useAppDispatch} from "../../../hooks/useAppDispatch";
-import {setFilter, setSelectedWork, setSelectedWorks} from "../../../store/app/app.slice";
-import {Work} from "../../screens/Works/Work";
+import {setFilter, setSelectedWork} from "../../../store/app/app.slice";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
 
 const filterWorksHandler = (filter: FilterType, works: IPortfolioItem[]) => {
@@ -21,7 +20,8 @@ const filterWorksHandler = (filter: FilterType, works: IPortfolioItem[]) => {
 export const PortfolioPage: FC = () => {
     useSetPhoto()
 
-    const {filter, works} = useAppSelector(state => state.app)
+    const filter = useAppSelector(state => state.app.filter)
+    const works = useAppSelector(state => state.app.works)
     const dispatch = useAppDispatch()
     const filteredWorks = filterWorksHandler(filter, works as IPortfolioItem[])
 
