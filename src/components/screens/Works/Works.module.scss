@@ -15,6 +15,21 @@
     overflow: hidden;
     transition: all .3s ease;
 
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
+    @include _768() {
+      &:nth-last-child(2) {
+        margin-bottom: 50px;
+      }
+    }
+
+
     @include _768() {
       width: 100%;
     }

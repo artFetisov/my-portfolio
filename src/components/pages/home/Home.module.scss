@@ -4,22 +4,22 @@
 .homeContainer {
   padding-top: 36px;
 
-}
+  .heading {
+    margin-bottom: 32px;
+    transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-box-shadow .3s;
 
-.heading {
-  margin-bottom: 32px;
-  transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-box-shadow .3s;
-
-  h2 {
-    color: #333;
-    font-family: poppins, Sans-serif;
-    font-size: 72px;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1.2em;
-    hyphens: auto;
+    h2 {
+      color: #333;
+      font-family: poppins, Sans-serif;
+      font-size: 72px;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.2em;
+      hyphens: auto;
+    }
   }
 }
+
 
 .border {
   width: 70px;

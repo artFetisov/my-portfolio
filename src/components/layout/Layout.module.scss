@@ -9,7 +9,6 @@
   transition: all .5s ease;
   background-color: #fff;
 
-
   @include _1400() {
     height: calc(100vh - 120px);
     padding: 0 50px;
@@ -40,11 +39,10 @@
     }
 
     @include _1040() {
-      padding: 95px 20px 0;
+      padding: 96px 20px;
     }
 
     .page {
-      //padding: 92px 100px 0 100px;
       padding: 92px 100px;
       position: relative;
       width: 100%;
@@ -61,11 +59,12 @@
       }
 
       @include _1040() {
-        height: calc(100vh - 100px);
+        //height: 100%;
+        height: calc(100vh - 280px);
+        //max-height: calc(100vh - 100px);
         padding: 0;
         overflow-y: visible;
       }
-
 
       &::-webkit-scrollbar-thumb {
         background-color: #fff;

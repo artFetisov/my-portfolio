@@ -51,7 +51,7 @@ export const AboutPage: FC = () => {
             </div>
         </section>
         <CustomHeading text={'skills'}/>
-        <section className={styles.infoBlock}>
+        <section className={styles.skillsBlock}>
             <div className={styles.infoLeftSideWrap}>
                 <div className={styles.infoLeftSide}>
                     <div className={styles.block}>
