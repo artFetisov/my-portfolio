@@ -38,9 +38,8 @@
     }
 
     @include _1040() {
-      // min-height ???
-      min-height: calc(100vh - 100px);
       padding: 96px 20px;
+      //height: 100%;
     }
 
     .page {
@@ -60,11 +59,7 @@
       }
 
       @include _1040() {
-        // refactor
         height: 100%;
-        //height: calc(100vh - 100px);
-        //height: calc(100vh - 280px);
-        //max-height: calc(100vh - 100px);
         padding: 0;
         overflow-y: visible;
       }

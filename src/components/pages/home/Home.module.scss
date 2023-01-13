@@ -4,6 +4,10 @@
 .homeContainer {
   padding-top: 36px;
 
+  @include _600() {
+    padding-bottom: 40px;
+  }
+
   .heading {
     margin-bottom: 32px;
     transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-box-shadow .3s;
