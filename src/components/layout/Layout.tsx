@@ -16,7 +16,7 @@ export const Layout: FC<{ children: ReactNode }> = ({children}) => {
 
         <div className={styles.contentContainer}>
             <MainPhoto/>
-            <TransitionGroup>
+            <TransitionGroup component={null}>
                 <CSSTransition key={location.key} classNames={'fade'} timeout={500}>
                     <div className={styles.rightSideWrap}>
                         <div className={cn(styles.page)}>
