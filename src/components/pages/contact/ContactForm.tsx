@@ -7,9 +7,14 @@ import {SubmitErrorHandler, SubmitHandler, useForm} from "react-hook-form";
 import {IContactData} from "../../../types/contacts.types";
 import {validEmail} from "../../../utils/validEmail";
 import {Spinner} from "../../ui/Spinner/Spinner";
+import {useAppDispatch} from "../../../hooks/useAppDispatch";
+import {sendMailTC} from "../../../store/mail/mail.actions";
+import {useAppSelector} from "../../../hooks/useAppSelector";
 
 export const ContactForm: FC = () => {
-    const [isShowSpinner, setIsShowSpinner] = useState(false)
+    const dispatch = useAppDispatch()
+
+    const mailStatus = useAppSelector(state => state.mail.status)
 
     const {
         reset,
@@ -21,20 +26,12 @@ export const ContactForm: FC = () => {
     })
 
     const onSubmit: SubmitHandler<IContactData> = (data) => {
-        setIsShowSpinner(true)
-
-        setTimeout(() => {
-            reset()
-            setIsShowSpinner(false)
-        }, 2000)
+        dispatch(sendMailTC(data))
+        // reset()
     }
 
     const onError: SubmitErrorHandler<IContactData> = (data: any, event: any) => {
-        setIsShowSpinner(true)
 
-        setTimeout(() => {
-            setIsShowSpinner(false)
-        }, 2000)
     }
 
     const isErrors = formState.errors.email?.message || formState.errors.name?.message
@@ -67,7 +64,7 @@ export const ContactForm: FC = () => {
         <div style={{display: 'flex', alignItems: 'center'}}>
             <MyButton type={'submit'} style={{padding: '0 30px', textTransform: 'uppercase', lineHeight: '50px'}}>Send
                 Message</MyButton>
-            {isShowSpinner && <Spinner/>}
+            {mailStatus === 'loading' && <Spinner/>}
         </div>
 
         <>
@@ -75,10 +72,5 @@ export const ContactForm: FC = () => {
                 <div className={styles.responseWarning}>One or more fields have an error. Please check and try
                     again.</div>}
         </>
-
-        {/*<>*/}
-        {/*    {isError &&*/}
-        {/*<div>There was an error trying to send your message. Please try again later.</div>}*/}
-        {/*</>*/}
     </form>
 }
