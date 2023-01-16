@@ -4,10 +4,6 @@ import {IContactData} from "../types/contacts.types";
 export const MailService = {
     async sendMail(data: IContactData) {
 
-        return axiosInstance.get('send-mail', {
-            params: {
-                ...data
-            }
-        })
+        return axiosInstance.post('send-mail', data)
     }
 }
