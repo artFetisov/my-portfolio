@@ -4,6 +4,7 @@ import {MyButton} from "../../ui/MyButton/MyButton";
 import {TypingEffect} from "../../ui/TypingEffect/TypingEffect";
 import {Link} from "react-router-dom";
 import {useSetPhoto} from "../../../hooks/useSetPhoto";
+import {PATH} from "../../../router/router.data";
 
 export const HomePage: FC = () => {
     useSetPhoto()
@@ -18,7 +19,7 @@ export const HomePage: FC = () => {
             <TypingEffect text={['Developer', 'Freelancer']}/>
         </div>
         <div className={styles.buttonWrap}>
-            <Link to={'/my-portfolio/contact'}>
+            <Link to={PATH.CONTACT}>
                 <MyButton>
                     Get in Touch
                 </MyButton>
