@@ -11,8 +11,8 @@ export interface IRoute {
 }
 
 export const routes: IRoute[] = [
-    {path: 'my-portfolio/home', element: HomePage, index: true},
-    {path: 'my-portfolio/about', element: AboutPage},
-    {path: 'my-portfolio/works', element: PortfolioPage},
-    {path: 'my-portfolio/contact', element: ContactPage},
+    {path: '/home', element: HomePage, index: true},
+    {path: '/about', element: AboutPage},
+    {path: '/works', element: PortfolioPage},
+    {path: '/contact', element: ContactPage},
 ]
