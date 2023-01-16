@@ -33,7 +33,7 @@ export const Nav: FC<INavProps> = ({link, localFilter, setLocalFilter}) => {
         setLocalFilter('')
     }
 
-    return <li key={link.title + '-' + link.path} onClick={onChangeFilter}
+    return <li key={link.title + '-' + link.filter} onClick={onChangeFilter}
                onMouseEnter={onLocalFilterHandler}
                onMouseLeave={onLocalFilterClear}
     >

@@ -10,9 +10,10 @@ import cn from 'classnames';
 
 export const Work: FC<{ work: IPortfolioItem }> = ({work}) => {
     const dispatch = useAppDispatch()
-    const {selectedWork} = useAppSelector(state => state.app)
-    const isSelected = selectedWork === work
 
+    const selectedWork = useAppSelector(state => state.app.selectedWork)
+
+    const isSelected = selectedWork === work
 
     const onMouseMoveHandler = () => {
         dispatch(setPhotoUrl(work.photo))

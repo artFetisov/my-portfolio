@@ -22,7 +22,9 @@ export const PortfolioPage: FC = () => {
 
     const filter = useAppSelector(state => state.app.filter)
     const works = useAppSelector(state => state.app.works)
+
     const dispatch = useAppDispatch()
+
     const filteredWorks = filterWorksHandler(filter, works as IPortfolioItem[])
 
     useEffect(() => {

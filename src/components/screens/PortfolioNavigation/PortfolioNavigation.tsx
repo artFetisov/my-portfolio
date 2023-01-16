@@ -5,15 +5,14 @@ import {Nav} from "./Nav";
 
 export interface ILink {
     title: string
-    path: string
     filter: FilterType
 }
 
 export const links: ILink[] = [
-    {title: 'All', path: '/', filter: 'all'},
-    {title: 'React', path: 'about', filter: 'react'},
-    {title: 'Native JS', path: 'portfolio', filter: 'native'},
-    {title: 'FullStack', path: 'contact', filter: 'fullStack'}
+    {title: 'All', filter: 'all'},
+    {title: 'React', filter: 'react'},
+    {title: 'Native JS', filter: 'native'},
+    {title: 'FullStack', filter: 'fullStack'}
 ]
 
 export const PortfolioNavigation: FC = () => {

@@ -9,10 +9,9 @@ import {useAppDispatch} from "../../../../hooks/useAppDispatch";
 import {setIsOpen} from "../../../../store/app/app.slice";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faXmark} from "@fortawesome/free-solid-svg-icons/faXmark";
-import {set} from "react-hook-form";
 
 export const BurgerMenu: FC = () => {
-    const {isOpenMenu} = useAppSelector(state => state.app)
+    const isOpenMenu = useAppSelector(state => state.app.isOpenMenu)
     const dispatch = useAppDispatch()
 
     const onClickHandler = () => {

@@ -7,7 +7,8 @@ import {BurgerButton} from "../../../ui/BurgerButton/BurgerButton";
 
 export const NavBar: FC = () => {
     const {pathname} = useLocation()
-    const [localPath, setLocalPath] = useState<string>('')
+    
+    const [localPath, setLocalPath] = useState('')
 
     const onLocalPathHandler = (path: string) => {
         setLocalPath(path)
