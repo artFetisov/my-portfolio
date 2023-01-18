@@ -1,4 +1,4 @@
-import React, {FC, useEffect} from 'react';
+import React, {FC} from 'react';
 import {Layout} from "./components/layout/Layout";
 import styles from './App.module.scss';
 import {Router} from "./router/Router";
@@ -7,18 +7,11 @@ import cn from 'classnames';
 import {BurgerMenu} from "./components/layout/Header/BurgerMenu/BurgerMenu";
 // @ts-ignore
 import AnimatedCursor from "react-animated-cursor";
-import {axiosInstance} from "./api/axios.instance";
-
 
 export const App: FC = () => {
     const isOpenMenu = useAppSelector(state => state.app.isOpenMenu)
 
-    useEffect(() => {
-        const response = axiosInstance.get('/')
-        console.log(response)
-    })
-
-    // подключить map, сделать точную анимацию навигации, заполнить всю информацию, подключить отправку почты, прикрепить ссылки на проекты и соцсети.
+    // подключить map,  заполнить всю информацию, прикрепить ссылки на проекты и соцсети.
 
     return <div className={styles.mainContainer}>
         <div className={cn(styles.mainContainer, {
