@@ -1,8 +1,7 @@
 import axios from 'axios'
 
 export const axiosInstance = axios.create({
-    // baseURL: process.env.NODE_ENV === 'development' ? process.env.REACT_APP_BACK_LOCAL : process.env.REACT_APP_BACK_VERCEL,
-    baseURL: process.env.REACT_APP_BACK_LOCAL,
+    baseURL: process.env.NODE_ENV === 'development' ? process.env.REACT_APP_BACK_LOCAL : process.env.REACT_APP_BACK_VERCEL,
     // withCredentials: true,
     headers: {
         'Access-Control-Allow-Origin': '*',
