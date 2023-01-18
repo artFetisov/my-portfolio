@@ -3,6 +3,6 @@ import {IContactData} from "../types/contacts.types";
 
 export const MailService = {
     sendMail(data: IContactData) {
-        return axiosInstance.get('/')
+        return axiosInstance.post('/send-mail', data)
     }
 }
