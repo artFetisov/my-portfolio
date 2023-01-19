@@ -5,7 +5,7 @@ import {faPhoneFlip, faLocationArrow, faEnvelopesBulk} from "@fortawesome/free-s
 import {InfoBox} from "../../ui/InfoBox/InfoBox";
 import {ContactForm} from "./ContactForm";
 import {useSetPhoto} from "../../../hooks/useSetPhoto";
-import {MyMap} from "../../ui/Map/Map";
+import {LeafletMap} from "../../ui/LeafletMap/LeafletMap";
 
 export const ContactPage: FC = () => {
     useSetPhoto()
@@ -20,7 +20,10 @@ export const ContactPage: FC = () => {
         <section className={styles.formContainer}>
             <ContactForm/>
             <div className={styles.map}>
-                <MyMap/>
+                <div style={{width: '100%', height: '360px'}}>
+                    <LeafletMap/>
+                </div>
+
             </div>
         </section>
     </div>
