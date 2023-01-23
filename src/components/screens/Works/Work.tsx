@@ -6,7 +6,7 @@ import {useAppDispatch} from "../../../hooks/useAppDispatch";
 import {setPhotoUrl, setSelectedWork} from "../../../store/app/app.slice";
 import {useAppSelector} from "../../../hooks/useAppSelector";
 import cn from 'classnames';
-
+import {Link, NavLink} from "react-router-dom";
 
 export const Work: FC<{ work: IPortfolioItem }> = ({work}) => {
     const dispatch = useAppDispatch()
@@ -20,9 +20,9 @@ export const Work: FC<{ work: IPortfolioItem }> = ({work}) => {
         dispatch(setSelectedWork(work))
     }
 
-    return <li className={styles.work} onMouseOver={onMouseMoveHandler}>
+    return <a href={work.link} target="_blank" className={styles.work} onMouseOver={onMouseMoveHandler}>
         <div className={cn({[styles.selected]: isSelected})}>
-            <span className={styles.icon}>
+                  <span className={styles.icon}>
                  <FontAwesomeIcon icon={work.icon}/>
             </span>
             <div className={styles.titleHolder}>
@@ -30,5 +30,5 @@ export const Work: FC<{ work: IPortfolioItem }> = ({work}) => {
                 <p>{work.description}</p>
             </div>
         </div>
-    </li>
+    </a>
 }

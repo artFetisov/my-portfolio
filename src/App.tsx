@@ -11,7 +11,7 @@ import AnimatedCursor from "react-animated-cursor";
 export const App: FC = () => {
     const isOpenMenu = useAppSelector(state => state.app.isOpenMenu)
 
-    // подключить map,  заполнить всю информацию, прикрепить ссылки на проекты и соцсети.
+    // заполнить всю информацию, прикрепить ссылки на проекты и соцсети.
 
     return <div className={styles.mainContainer}>
         <div className={cn(styles.mainContainer, {
