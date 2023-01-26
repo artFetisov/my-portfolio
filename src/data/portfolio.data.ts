@@ -1,8 +1,8 @@
 import {IconDefinition} from "@fortawesome/free-brands-svg-icons";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons/faInstagram";
 import {faFileExcel} from "@fortawesome/free-solid-svg-icons";
-import oneImage from '../assets/images/5-3d-character-development.jpg';
-import twoPhoto from '../assets/images/7-3d-animation.jpg';
+import quizImage from '../assets/images/1621568763_18-phonoteka_org-p-kviz-fon-23.jpg';
+import excelImg from '../assets/images/excel-indir-scaled.webp';
 
 export type FilterType = 'react' | 'native' | 'fullStack' | 'all'
 
@@ -18,10 +18,10 @@ export interface IPortfolioItem {
 export const myWorks: IPortfolioItem[] = [
     {
         category: 'react',
-        title: 'Todo List',
+        title: 'Quizzz',
         description: 'Lorem kjnfjkanflekjfbakljfbejkfefj hjdbfieuief efjnfeefe.......',
         icon: faInstagram,
-        photo: oneImage,
+        photo: quizImage,
         link: 'https://cards-app-artfetisov.vercel.app'
     },
     {
@@ -29,7 +29,7 @@ export const myWorks: IPortfolioItem[] = [
         title: 'Excel',
         description: 'Lorem kjnfjkanflekjfbakljfbejkfefj hjdbfieuief efjnfeefe.......',
         icon: faFileExcel,
-        photo: twoPhoto,
+        photo: excelImg,
         link: 'https://excel-new-p6do.vercel.app'
     },
 ]
