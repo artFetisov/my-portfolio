@@ -32,7 +32,7 @@ export const AboutPage: FC = () => {
                         </li>
                         <li>
                             <span>Address:</span>
-                            <span>Lenina Street, Penza, Russia</span>
+                            <span>Kokkinaki Street, Moscow, Russia</span>
                         </li>
                         <li>
                             <span>Study:</span>
@@ -55,26 +55,26 @@ export const AboutPage: FC = () => {
             <div className={styles.infoLeftSideWrap}>
                 <div className={styles.infoLeftSide}>
                     <div className={styles.block}>
-                        <ProgressBar width={95} label={'Typescript'}/>
-                        <ProgressBar width={95} label={'React'}/>
-                        <ProgressBar width={90} label={'Redux-toolkit'}/>
-                        <ProgressBar width={40} label={'Unit tests'}/>
-                        <ProgressBar width={90} label={'HTML & CSS'}/>
-                        <ProgressBar width={90} label={'HTML & CSS'}/>
-                        <ProgressBar width={86} label={'HTML & CSS'}/>
+                        <ProgressBar width={90} label={'Typescript'}/>
+                        <ProgressBar width={90} label={'React'}/>
+                        <ProgressBar width={90} label={'Redux'}/>
+                        <ProgressBar width={90} label={'Redux Toolkit'}/>
+                        <ProgressBar width={90} label={'HTML/ CSS/ SCSS'}/>
+                        <ProgressBar width={60} label={'Node JS'}/>
+                        <ProgressBar width={60} label={'Express/ NestJS'}/>
                     </div>
                 </div>
             </div>
             <div className={styles.infoRightSideWrap}>
                 <div className={styles.infoRightSide}>
                     <div className={styles.block}>
-                        <ProgressBar width={95} label={'Typescript'}/>
-                        <ProgressBar width={80} label={'React'}/>
-                        <ProgressBar width={20} label={'Redux-toolkit'}/>
-                        <ProgressBar width={80} label={'Unit tests'}/>
-                        <ProgressBar width={16} label={'HTML & CSS'}/>
-                        <ProgressBar width={90} label={'HTML & CSS'}/>
-                        <ProgressBar width={90} label={'HTML & CSS'}/>
+                        <ProgressBar width={80} label={'Axios/ REST API'}/>
+                        <ProgressBar width={80} label={'MUI/ Ant Design'}/>
+                        <ProgressBar width={70} label={'Next.js'}/>
+                        <ProgressBar width={80} label={'React Hook Form'}/>
+                        <ProgressBar width={60} label={'Unit tests'}/>
+                        <ProgressBar width={60} label={'Storybook'}/>
+                        <ProgressBar width={70} label={'Git'}/>
                     </div>
                 </div>
             </div>

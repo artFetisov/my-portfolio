@@ -6,7 +6,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: auto;
+}
+
+div, span, p, a, ul, section {
+  cursor: default !important;
+}
+
+.close-toastr {
+  span {
+    cursor: pointer !important;
+  }
+
 }
 
 .leaflet-container {

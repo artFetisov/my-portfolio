@@ -1,31 +1,28 @@
 import {FC} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
-    faFacebook,
     faInstagram,
-    faYoutube,
+    faGithub,
     faTelegram,
+    faNodeJs,
     IconDefinition,
-    faLinkedinIn
 } from "@fortawesome/free-brands-svg-icons";
 import styles from './Footer.module.scss';
-import {Link} from "react-router-dom";
 
 const socialIcons: { name: IconDefinition, path: string }[] = [
-    {name: faFacebook, path: '/'},
-    {name: faInstagram, path: '/'},
-    {name: faYoutube, path: '/'},
-    {name: faTelegram, path: '/'},
-    {name: faLinkedinIn, path: '/'}
+    {name: faInstagram, path: 'https://instagram.com/artfetisov?igshid=YmMyMTA2M2Y='},
+    {name: faTelegram, path: 'https://t.me/artFetisov'},
+    {name: faGithub, path: 'https://github.com/artFetisov'},
+    {name: faNodeJs, path: 'https://www.codewars.com/users/artFetisov'}
 ]
 
 export const SocialList: FC = () => {
     return <ul className={styles.socialList}>
         {socialIcons.map((i, ind) => <li key={ind + '-' + i.path}>
             <div>
-                <Link to={i.path}>
+                <a href={i.path} target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={i.name}/>
-                </Link>
+                </a>
             </div>
         </li>)}
     </ul>

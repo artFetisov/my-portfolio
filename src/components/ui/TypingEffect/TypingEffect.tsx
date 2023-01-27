@@ -3,10 +3,11 @@ import ReactTypingEffect from "react-typing-effect";
 import styles from './TypingEffect.module.scss';
 
 interface ITypingProps {
-    text: string | string[]
+    text: string[]
 }
 
 export const TypingEffect: FC<ITypingProps> = ({text}) => {
+
     return <>
         <ReactTypingEffect
             className={styles.typing}
@@ -20,8 +21,8 @@ export const TypingEffect: FC<ITypingProps> = ({text}) => {
             cursorClassName={styles.cursor}
             displayTextRenderer={(text) => {
                 return <h3>
-                    <span>React</span>
-                    <span><b className={styles.typingElem}>{text}</b></span>
+                    <span>Frontend</span>
+                    <span><b>{text}</b></span>
                 </h3>
             }
             }

@@ -11,8 +11,6 @@ import AnimatedCursor from "react-animated-cursor";
 export const App: FC = () => {
     const isOpenMenu = useAppSelector(state => state.app.isOpenMenu)
 
-    // заполнить всю информацию, прикрепить ссылки на проекты и соцсети.
-
     return <div className={styles.mainContainer}>
         <div className={cn(styles.mainContainer, {
             [styles.translate]: isOpenMenu
@@ -36,7 +34,7 @@ export const App: FC = () => {
             innerScale={0}
             outerScale={2.6}
             clickables={[
-                // 'a',
+                'a',
                 'input[type="text"]',
                 'input[type="email"]',
                 'input[type="number"]',
