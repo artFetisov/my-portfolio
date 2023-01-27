@@ -14,13 +14,21 @@ export const AboutPage: FC = () => {
             <div className={styles.infoLeftSideWrap}>
                 <div className={styles.infoLeftSide}>
                     <p className={styles.block}>
-                        Hello there! My name is <strong>Alan Walker</strong>. I am a graphic designer, and I’m very
-                        passionate and dedicated
-                        to my work.
+                        Hello, I am a person who has a strong passion for programming. I have
+                        experience in creating SPA with React/Redux/TypeScript. Now I am improving
+                        my skills in this direction and expanding them with new technologies.
+                        {/*Hello there! My name is <strong>Alan Walker</strong>. I am a graphic designer, and I’m very*/}
+                        {/*passionate and dedicated*/}
+                        {/*to my work.*/}
                     </p>
-                    <p className={styles.block}>With 20 years experience as a professional a graphic designer, I have
-                        acquired the skills and
-                        knowledge necessary to make your project a success.</p>
+                    <p className={styles.block}>
+                        I spend
+                        my leisure time improving my English and solving katas on Codewars. Open for
+                        your suggestions.
+                        {/*With 20 years experience as a professional a graphic designer, I have*/}
+                        {/*acquired the skills and*/}
+                        {/*knowledge necessary to make your project a success.*/}
+                    </p>
                 </div>
             </div>
             <div className={styles.infoRightSideWrap}>

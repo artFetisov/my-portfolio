@@ -8,8 +8,9 @@ export const ReduxToastr: FC = () => {
         newestOnTop={false}
         preventDuplicates
         progressBar
+        position={'bottom-center'}
         closeOnToastrClick
-        timeOut={30000}
+        timeOut={3000}
         transitionIn="fadeIn"
         transitionOut="fadeOut"
     />
