@@ -20,10 +20,7 @@ div, span, p, a, ul, section {
 }
 
 .toastr {
-  @include _600() {
-    width: 200px;
-    max-width: 250px;
-  }
+
 }
 
 .leaflet-container {

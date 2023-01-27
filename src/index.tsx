@@ -11,6 +11,7 @@ import {ReduxToastr} from "./components/ui/ReduxToastr/ReduxToastr";
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
+
 root.render(
     <BrowserRouter>
         <Provider store={store}>
