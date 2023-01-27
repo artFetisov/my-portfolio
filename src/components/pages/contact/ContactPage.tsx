@@ -13,7 +13,7 @@ export const ContactPage: FC = () => {
     return <div className={styles.container}>
         <CustomHeading text={'get in touch'}/>
         <section className={styles.infoContainer}>
-            <InfoBox text={'Lenina St., Penza, Russia'} icon={faLocationArrow}/>
+            <InfoBox text={'Kokkinaki St., Moscow, Russia'} icon={faLocationArrow}/>
             <InfoBox text={'fetishfestoff@mail.ru'} icon={faEnvelopesBulk}/>
             <InfoBox text={'+7 987 508 53 36'} icon={faPhoneFlip}/>
         </section>

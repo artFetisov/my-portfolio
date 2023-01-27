@@ -15,6 +15,7 @@
     overflow: hidden;
     transition: all .3s ease;
 
+
     &:nth-last-child(2) {
       margin-bottom: 0;
     }
@@ -47,6 +48,7 @@
       padding: 70px 40px 63px;
       border: 1px solid #b9b8c3;
       transition: all .3s ease-out;
+      cursor: pointer;
 
       &.selected {
         background-color: #333333;

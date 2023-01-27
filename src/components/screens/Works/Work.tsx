@@ -20,8 +20,8 @@ export const Work: FC<{ work: IPortfolioItem }> = ({work}) => {
         dispatch(setSelectedWork(work))
     }
 
-    return <a href={work.link} target="_blank" className={styles.work} onMouseOver={onMouseMoveHandler}>
-        <div className={cn({[styles.selected]: isSelected})}>
+    return <a href={work.link} target="_blank" className={styles.work}>
+        <div className={cn({[styles.selected]: isSelected})} onMouseOver={onMouseMoveHandler}>
                   <span className={styles.icon}>
                  <FontAwesomeIcon icon={work.icon}/>
             </span>

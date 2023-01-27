@@ -8,14 +8,13 @@ export const sendMailTC = createAsyncThunk<void, IContactData>('send-mail', asyn
     try {
         dispatch(setMailStatus({status: 'loading'}))
 
-        const response = await MailService.sendMail(data)
-        console.log(response)
+        await MailService.sendMail(data)
 
         dispatch(setMailStatus({status: 'succeeded'}))
-        toastr.success('Send mail', 'mail is sended')
+        toastr.success('Your message has been sent', 'I will answer you soon')
     } catch (error) {
         dispatch(setMailStatus({status: 'failed'}))
-        toastr.error('Error', 'mail is not sended')
+        toastr.error('Error', 'Your message has not been sent, an error has occurred')
     }
 
 })

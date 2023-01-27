@@ -36,17 +36,17 @@ export const App: FC = () => {
             innerScale={0}
             outerScale={2.6}
             clickables={[
-                'a',
-                // 'input[type="text"]',
-                // 'input[type="email"]',
-                // 'input[type="number"]',
-                // 'input[type="submit"]',
-                // 'input[type="image"]',
+                // 'a',
+                'input[type="text"]',
+                'input[type="email"]',
+                'input[type="number"]',
+                'input[type="submit"]',
+                'input[type="image"]',
                 'label[for]',
                 'select',
                 // 'textarea',
                 'button',
-                '.link'
+                '.link',
             ]}
             hasBlendMode={true}
         />
