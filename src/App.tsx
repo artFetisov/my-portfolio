@@ -35,7 +35,7 @@ export const App: FC = () => {
             outerScale={2.6}
             clickables={[
                 'a',
-                'input[type="text"]',
+                // 'input[type="text"]',
                 'input[type="email"]',
                 'input[type="number"]',
                 'input[type="submit"]',

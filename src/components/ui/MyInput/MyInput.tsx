@@ -12,7 +12,7 @@ interface IMyInputProps extends DefaultInputPropsType {
 
 export const MyInput = forwardRef<HTMLInputElement, IMyInputProps>(({error, stylesI, ...props}, ref) => {
 
-    return <div className={styles.wrapperInp}><input ref={ref} className={cn(styles.input, stylesI)}
+    return <div className={styles.wrapperInp}><input ref={ref} type={'text'} className={cn(styles.input, stylesI)}
                                                      style={styles}
                                                      name="input"
                                                      {...props}/>
