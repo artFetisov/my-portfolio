@@ -1,9 +1,9 @@
-import {FC, useState} from "react";
+import {FC} from "react";
 import styles from "./ContactPage.module.scss";
 import {MyInput} from "../../ui/MyInput/MyInput";
 import {MyTextarea} from "../../ui/MyTextarea/MyTextarea";
 import {MyButton} from "../../ui/MyButton/MyButton";
-import {SubmitErrorHandler, SubmitHandler, useForm} from "react-hook-form";
+import {SubmitHandler, useForm} from "react-hook-form";
 import {IContactData} from "../../../types/contacts.types";
 import {validEmail} from "../../../utils/validEmail";
 import {Spinner} from "../../ui/Spinner/Spinner";
@@ -25,18 +25,15 @@ export const ContactForm: FC = () => {
         mode: 'onSubmit',
     })
 
-    const onSubmit: SubmitHandler<IContactData> = (data) => {
-        dispatch(sendMailTC(data))
-        // reset()
-    }
+    const onSubmit: SubmitHandler<IContactData> = async (data) => {
+        const response = await dispatch(sendMailTC(data))
 
-    const onError: SubmitErrorHandler<IContactData> = (data: any, event: any) => {
-
+        if (!response.payload) reset()
     }
 
     const isErrors = formState.errors.email?.message || formState.errors.name?.message
 
-    return <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
+    return <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 
         <MyInput  {...register('name', {
             required: 'The field is required.',

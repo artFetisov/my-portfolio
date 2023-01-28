@@ -4,7 +4,9 @@ import {setMailStatus} from "./mail.slice";
 import {MailService} from "../../services/mail.service";
 import {toastr} from "react-redux-toastr";
 
-export const sendMailTC = createAsyncThunk<void, IContactData>('send-mail', async (data, {dispatch}) => {
+export const sendMailTC = createAsyncThunk<void, IContactData>('send-mail', async (data, {
+    dispatch, rejectWithValue
+}) => {
     try {
         dispatch(setMailStatus({status: 'loading'}))
 
@@ -12,9 +14,11 @@ export const sendMailTC = createAsyncThunk<void, IContactData>('send-mail', asyn
 
         dispatch(setMailStatus({status: 'succeeded'}))
         toastr.success('Your message has been sent', 'I will answer you soon')
+
     } catch (error) {
         dispatch(setMailStatus({status: 'failed'}))
         toastr.error('Error', 'Your message has not been sent, an error has occurred')
+        return rejectWithValue('error')
     }
 
 })
