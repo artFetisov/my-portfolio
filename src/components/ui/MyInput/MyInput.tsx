@@ -16,6 +16,6 @@ export const MyInput = forwardRef<HTMLInputElement, IMyInputProps>(({error, styl
                                                      style={styles}
                                                      name="input"
                                                      {...props}/>
-        {/*{error && <div className={styles.error}>{error.message}</div>}*/}
+        {error && <div className={styles.error}>{error.message}</div>}
     </div>
 })
