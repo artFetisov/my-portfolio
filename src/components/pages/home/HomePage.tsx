@@ -16,7 +16,7 @@ export const HomePage: FC = () => {
         <div className={styles.border}>
         </div>
         <div className={styles.typingBlock}>
-            <TypingEffect text={['Developer', 'Freelancer']}/>
+            <TypingEffect text={['Frontend Developer', 'React Developer']}/>
         </div>
         <div className={styles.buttonWrap}>
             <Link to={PATH.CONTACT}>

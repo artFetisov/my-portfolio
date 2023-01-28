@@ -21,7 +21,7 @@ export const TypingEffect: FC<ITypingProps> = ({text}) => {
             cursorClassName={styles.cursor}
             displayTextRenderer={(text) => {
                 return <h3>
-                    <span>Frontend</span>
+                    {/*<span>Frontend</span>*/}
                     <span><b>{text}</b></span>
                 </h3>
             }
