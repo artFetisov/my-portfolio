@@ -12,7 +12,8 @@ export const links: ILink[] = [
     {title: 'All', filter: 'all'},
     {title: 'React', filter: 'react'},
     {title: 'Native JS', filter: 'native'},
-    {title: 'FullStack', filter: 'fullStack'}
+    {title: 'FullStack', filter: 'fullStack'},
+    {title: 'Angular', filter: 'angular'}
 ]
 
 export const PortfolioNavigation: FC = () => {

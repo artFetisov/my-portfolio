@@ -14,6 +14,7 @@ const filterWorksHandler = (filter: FilterType, works: IPortfolioItem[]) => {
     if (filter === 'react') return works.filter(work => work.category === 'react')
     if (filter === 'fullStack') return works.filter(work => work.category === 'fullStack')
     if (filter === 'native') return works.filter(work => work.category === 'native')
+    if (filter === 'angular') return works.filter(work => work.category === 'angular')
     return works
 }
 
