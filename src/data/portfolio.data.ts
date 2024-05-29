@@ -18,6 +18,14 @@ export interface IPortfolioItem {
 
 export const myWorks: IPortfolioItem[] = [
   {
+    category: ['next', 'fullStack'],
+    title: 'Ozon',
+    description: 'A copy of the Ozon online store',
+    icon: faFirstOrder,
+    photo: ozonImg,
+    link: 'https://ozon-front.vercel.app/',
+  },
+  {
     category: ['react'],
     title: 'Quizzz',
     description: 'This is an application where you can answer questions from other users and test your knowledge...',
@@ -32,13 +40,5 @@ export const myWorks: IPortfolioItem[] = [
     icon: faFileExcel,
     photo: excelImg,
     link: 'https://excel-new-p6do.vercel.app',
-  },
-  { 
-    category: ['next', 'fullStack'],
-    title: 'Ozon',
-    description: 'A copy of the Ozon online store',
-    icon: faFirstOrder,
-    photo: ozonImg,
-    link: 'https://ozon-front.vercel.app/',
   },
 ]
