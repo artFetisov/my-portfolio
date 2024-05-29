@@ -33,7 +33,7 @@ export const myWorks: IPortfolioItem[] = [
     photo: excelImg,
     link: 'https://excel-new-p6do.vercel.app',
   },
-  {
+  { 
     category: ['next', 'fullStack'],
     title: 'Ozon',
     description: 'A copy of the Ozon online store',
