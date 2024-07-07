@@ -27,8 +27,8 @@ export const myWorks: IPortfolioItem[] = [
   },
   {
     category: ['react'],
-    title: 'Quizzz',
-    description: 'This is an application where you can answer questions from other users and test your knowledge...',
+    title: 'Learning platform',
+    description: 'Приложение предназначено для обучения с помощью карточек, содержащих вопросы и ответы.',
     icon: faCircleQuestion,
     photo: quizImage,
     link: 'https://cards-app-artfetisov.vercel.app',
