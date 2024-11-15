@@ -1,6 +1,6 @@
-import { IconDefinition } from '@fortawesome/free-brands-svg-icons'
-import { faCircleQuestion } from '@fortawesome/free-regular-svg-icons'
-import { faFileExcel } from '@fortawesome/free-solid-svg-icons'
+import { IconDefinition, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faCircleQuestion,  } from '@fortawesome/free-regular-svg-icons'
+import { faFileExcel,  } from '@fortawesome/free-solid-svg-icons'
 import quizImage from '../assets/images/1621568763_18-phonoteka_org-p-kviz-fon-23.jpg'
 import excelImg from '../assets/images/excel-indir-scaled.webp'
 import socialImg from '../assets/images/social.jpg'
@@ -22,7 +22,7 @@ export const myWorks: IPortfolioItem[] = [
     category: ['next'],
     title: 'Communication platform',
     description: 'Социальная сеть.',
-    icon: faCircleQuestion,
+    icon: faTwitter,
     photo: socialImg,
     link: 'https://project-icn.work',
   },
